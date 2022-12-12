@@ -1,4 +1,36 @@
 
+
+
+
+语言和地区的一些知识：
+
+首先一个语言的描述规则是下面这样的：
+
+```text
+language-extlang-script-region-variant-extension-privateuse
+语言文字种类-扩展语言文字种类-变体（或方言）-使用区域-变体（或方言）-扩展-私有
+```
+
+- language 全小写，通常两位，新版规范三位，比如：zh
+- extlang 全小写，三位，表示扩展语言，比如：粤语 yue （这里还有个 macrolanguage 的事情，先不提了）
+- script 首字母大写，四位，表示变体，比如：中文的 繁体字 Hant 和 简体字 Hans
+- region 全大写，两位，表示用于地区，比如：都是繁体中文，香港的惯用语与台湾的会有区别
+
+所以区别就很明显了：
+
+- zh-CN 表示用在**中国大陆区域的中文**。包括各种大方言、小方言、繁体、简体等等都可以被匹配到。
+- zh-Hans 表示**简体中文**。适用区域范围是全宇宙用中文简体的地方，内容包括各种用简体的方言等。
+
+csv to json 
+
+https://csvjson.com/csv2json
+
+
+
+---
+
+
+
 ### ISO-3166 Country and Dependent Territories Lists with UN Regional Codes
 
 These lists are the result of merging data from two sources, the Wikipedia [ISO 3166-1 article](http://en.wikipedia.org/wiki/ISO_3166-1#Officially_assigned_code_elements) for alpha and numeric country codes, and the [UN Statistics](https://unstats.un.org/unsd/methodology/m49/overview) site for countries' regional, and sub-regional codes. In addition to countries, it includes dependent territories.
