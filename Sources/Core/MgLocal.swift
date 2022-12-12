@@ -1,5 +1,17 @@
 
 import Foundation
+
+public enum MgLanguage: String {
+    case chinse
+    case english
+    case french
+    case german
+    
+    var alpha2: String {
+        
+        return ""
+    }
+}
 public extension Locale {
     
     static var isChina: Bool {
@@ -118,7 +130,6 @@ public extension Locale {
     static func isRU() -> Bool {
         let systemLanguages = NSLocale.preferredLanguages
         let currentLanguage = systemLanguages.first ?? ""
-        ldPrint("currentLanguage == \(currentLanguage)")
         return currentLanguage.lowercased().contains("ru")
     }
     
@@ -126,7 +137,6 @@ public extension Locale {
     static func isPT() -> Bool {
         let systemLanguages = NSLocale.preferredLanguages
         let currentLanguage = systemLanguages.first ?? ""
-        ldPrint("currentLanguage == \(currentLanguage)")
         return currentLanguage.lowercased().contains("pt")
     }
 }
